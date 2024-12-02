@@ -28,9 +28,8 @@ public class PaintFrame extends JFrame {
     }
 
     JPanel marco = new JPanel();
-    PanelRound panel = new PanelRound(5, 5, 5, 5);
-    PanelRound buttonPanel = new PanelRound(0, 0, 5, 5);
-    JPanel textPanel = new JPanel();
+    PanelRound panel = new PanelRound(25, 25, 25, 25);
+    JPanel buttonPanel = new JPanel();
     JTextField numField = new JTextField("0");
 
     String[][] buttonsData = {  {"AC", "ans", "+/–", "/"},
@@ -46,6 +45,7 @@ public class PaintFrame extends JFrame {
     Color lightGray = new Color(92, 92, 95);
     Color darkGray = new Color(42, 42, 44);
     Color orangito = new Color(255, 159, 10);
+    Color mandarin = new Color(179, 110, 41);
 
     public PaintFrame() {
         try {
@@ -121,12 +121,16 @@ public class PaintFrame extends JFrame {
         //style text field
         numField.setFont(new Font("Dialog", Font.PLAIN, 33));
         numField.setHorizontalAlignment(4);
-        numField.setOpaque(true);
+        numField.setOpaque(false);
         numField.setBorder(new EmptyBorder(new Insets(0, 4, 6, 4)));
 
         buttonPanel.setBackground(Color.BLACK);
         numField.setBackground(Color.BLACK);
         numField.setForeground(Color.white);
+        marco.setBackground(mandarin);
+
+        panel.setBorder(new EmptyBorder(new Insets(5, 5, 5, 5)));
+        panel.setBackground(Color.black);
         
         panel.add(numField);
         panel.add(buttonPanel);
