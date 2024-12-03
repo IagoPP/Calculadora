@@ -1,3 +1,4 @@
+import java.awt.Dialog;
 import java.awt.event.*;
 import java.util.ArrayList;
 
@@ -68,6 +69,8 @@ public class ActionController implements ActionListener {
                             dialog="";
                             erase=false;
                         }
+                        viewPaintFrame.buttons[0][0].setText("C");
+
                         if(dialog.length()<=10){
                             dialog = dialog + viewPaintFrame.buttons[i][j].getText();
                             viewPaintFrame.numField.setText(dialog);
@@ -95,6 +98,12 @@ public class ActionController implements ActionListener {
                         dialog = String.valueOf("0");
                         viewPaintFrame.numField.setText(dialog);
                         prevNum = "";
+                        erase=true;
+                    }
+                    if (viewPaintFrame.buttons[i][j].getText().equals("C")) {
+                        dialog = String.valueOf("0");
+                        viewPaintFrame.numField.setText(dialog);
+                        viewPaintFrame.buttons[0][0].setText("AC");
                         erase=true;
                     }
 

@@ -122,21 +122,25 @@ public class PaintFrame extends JFrame {
         numField.setFont(new Font("Dialog", Font.PLAIN, 33));
         numField.setHorizontalAlignment(4);
         numField.setOpaque(false);
-        numField.setBorder(new EmptyBorder(new Insets(0, 4, 6, 4)));
+        numField.setBorder(new EmptyBorder(new Insets(0, 4, 6, 5)));
         numField.setBackground(Color.BLACK);
         numField.setForeground(Color.white);
 
+        buttonPanel.setBorder(new EmptyBorder(new Insets(0, 5, 0, 5)));
         buttonPanel.setBackground(Color.BLACK);
 
-        panel.setBorder(new EmptyBorder(new Insets(5, 5, 5, 5)));
+        panel.setBorder(new EmptyBorder(new Insets(0, 0, 5, 0)));
         panel.setBackground(Color.black);       
         panel.add(numField);
         panel.add(buttonPanel);
 
         marco.setBackground(mandarin);
 
+
         marco.add(panel);
 
+
         execActions();
+
     }
 }
