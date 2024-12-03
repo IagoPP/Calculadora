@@ -115,7 +115,7 @@ public class PaintFrame extends JFrame {
         for (int i = 0; i < buttons[0].length-1; i++) {
             buttons[0][i].setBackground(lightGray);
             buttons[0][i].setForeground(Color.black);
-            buttons[0][i].setFont(new Font("Dialog", Font.PLAIN, 13));
+            buttons[0][i].setFont(new Font("Arial", Font.PLAIN, 13));
         }
 
         //style text field
@@ -123,17 +123,17 @@ public class PaintFrame extends JFrame {
         numField.setHorizontalAlignment(4);
         numField.setOpaque(false);
         numField.setBorder(new EmptyBorder(new Insets(0, 4, 6, 4)));
-
-        buttonPanel.setBackground(Color.BLACK);
         numField.setBackground(Color.BLACK);
         numField.setForeground(Color.white);
-        marco.setBackground(mandarin);
+
+        buttonPanel.setBackground(Color.BLACK);
 
         panel.setBorder(new EmptyBorder(new Insets(5, 5, 5, 5)));
-        panel.setBackground(Color.black);
-        
+        panel.setBackground(Color.black);       
         panel.add(numField);
         panel.add(buttonPanel);
+
+        marco.setBackground(mandarin);
 
         marco.add(panel);
 
